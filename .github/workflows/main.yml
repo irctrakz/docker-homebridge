@@ -129,7 +129,9 @@ jobs:
         if: ${{ !endsWith(github.ref, steps.get_version.outputs.version ) }}
         run: |
           echo Latest Tag does not matches Release tag
-          exit 1   
+          exit 1  
+      - name: Published
+        run: echo "::notice::GitHub Release - https://github.com/homebridge/docker-homebridge/releases/tag/${{ github.event.release.tag_name }}" 
 
   github-releases-to-discord:
     name: Discord Webhooks
@@ -139,7 +141,6 @@ jobs:
       title: "Homebridge Docker Release"
       description: |
         Version `${{ github.event.release.tag_name }}`
-      url: "https://github.com/homebridge/homebridge-docker/releases/tag/${{ github.event.release.tag_name }}"
+      url: "https://github.com/homebridge/docker-homebridge/releases/tag/${{ github.event.release.tag_name }}"
     secrets:
       DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL_LATEST }}
-
