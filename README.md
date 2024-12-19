@@ -15,7 +15,7 @@ This is a multi-arch image and will run on x86_64, Raspberry Pi 2, 3, 4, Zero 2 
 
 | Image Tag             | Architectures           | Base Image         | 
 | :-------------------- | :-----------------------| :----------------- | 
-| latest, ubuntu        | amd64, arm32v7, arm64v8 | Ubuntu 22.04       | 
+| latest, ubuntu        | amd64, arm32v7, arm64v8 | Ubuntu 24.04       | 
 
 ## Step-By-Step Guides
 
@@ -132,7 +132,7 @@ Join the [Official Homebridge Discord](https://discord.gg/Cmq8a44) community and
 
 ## License
 
-Copyright (C) 2023 homebridge
+Copyright (C) 2024 homebridge
 Copyright (C) 2017-2022 oznu
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
