@@ -58,7 +58,6 @@ RUN set -x \
     && ln -snf /usr/share/zoneinfo/Etc/GMT /etc/localtime \
     && echo Etc/GMT > /etc/timezone \
     && pip3 install tzupdate \
-    && chmod 4755 /bin/ping \
     && tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz \
     && tar -C / -Jxpf /tmp/s6-overlay-arch.tar.xz \
     && tar -C / -xzf /tmp/ffmpeg-debian-*.tar.gz --no-same-owner \
